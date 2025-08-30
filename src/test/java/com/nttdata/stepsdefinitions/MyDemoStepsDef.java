@@ -39,15 +39,15 @@ public class MyDemoStepsDef {
     @When("agrego {string} del siguiente producto {string}")
     public void agregoDelSiguienteProducto(String unidades, String producto) {
 
-        if (producto.equals("Sauce Labs Backpack")) {
+        if (producto.equals("Sauce Labs Backpack") && unidades.equals("1")) {
             myDemoSteps.compra1();
             myDemoSteps.agregarCarrito();
 
-        }else if (producto.equals("Sauce Labs Bolt T-Shirt")) {
+        }else if (producto.equals("Sauce Labs Bolt T-Shirt") && unidades.equals("1")) {
             myDemoSteps.compra2();
             myDemoSteps.agregarCarrito();
 
-        }else if (producto.equals("Sauce Labs Bike Light")) {
+        }else if (producto.equals("Sauce Labs Bike Light") && unidades.equals("2")) {
             myDemoSteps.compra3();
             myDemoSteps.agregarCarrito();
         }else {

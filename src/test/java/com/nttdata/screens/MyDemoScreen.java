@@ -5,6 +5,7 @@ import io.cucumber.messages.Messages;
 import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -32,16 +33,34 @@ public class MyDemoScreen extends PageObject {
     private WebElement txtTitle;
     
     public int getCountElement() {
-
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
         return productsList.size();
     }
 
-    public void clickBackpack() {btnBackpack.click();}
-    public void clickAddToCart() {btnAddToCart.click();}
-    public void clickCart() {btnCart.click();}
-    public void clickBoltTShirt(){btnBoltTShirt.click();}
-    public void clickBikeLight(){btnBikeLight.click();}
-    public String getTitle() {return txtTitle.getText();}
+    public void clickBackpack() {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        btnBackpack.click();
+    }
+    public void clickAddToCart() {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        btnAddToCart.click();
+    }
+    public void clickCart() {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        btnCart.click();
+    }
+    public void clickBoltTShirt(){
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        btnBoltTShirt.click();
+    }
+    public void clickBikeLight(){
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        btnBikeLight.click();
+    }
+    public String getTitle() {
+        WebDriverWait wait = new WebDriverWait(getDriver(), 20);
+        return txtTitle.getText();
+    }
 
 
 }

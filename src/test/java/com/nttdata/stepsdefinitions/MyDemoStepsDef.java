@@ -1,5 +1,6 @@
 package com.nttdata.stepsdefinitions;
 
+import com.gargoylesoftware.htmlunit.html.DomNode;
 import com.nttdata.steps.MyDemoSteps;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -11,6 +12,8 @@ import net.thucydides.core.annotations.Steps;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
@@ -21,15 +24,14 @@ public class MyDemoStepsDef {
     @Steps
     MyDemoSteps myDemoSteps;
 
-
     @Given("estoy en la aplicación de SauceLabs")
     public void estoyEnLaAplicacionDeSauceLabs() {
         System.out.println("Estoy en la Aplicacion de SauceLabs");
-
     }
 
     @And("valido que carguen correctamente los productos en la galeria")
     public void validoQueCarguenCorrectamenteLosProductosEnLaGaleria() {
+
         myDemoSteps.validarCantProduct();
         System.out.println("Cargo correctamente los productos en la galeria");
     }
@@ -56,6 +58,7 @@ public class MyDemoStepsDef {
 
     @Then("valido el carrito de compra actualice correctamente {string}")
     public void validoElCarritoDeCompraActualiceCorrectamenteY(String prod) {
+
         myDemoSteps.carrito();
         Assert.assertEquals(prod,myDemoSteps.getTitle());
 

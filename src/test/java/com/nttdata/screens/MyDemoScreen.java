@@ -30,7 +30,7 @@ public class MyDemoScreen extends PageObject {
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id=\"com.saucelabs.mydemoapp.android:id/titleTV\"]")
     private WebElement txtTitle;
-
+    
     public int getCountElement() {
 
         return productsList.size();
